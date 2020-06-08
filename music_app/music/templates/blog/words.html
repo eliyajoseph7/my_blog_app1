@@ -1,0 +1,89 @@
+{% include 'navbar/wordsNav.html' %} {% load static %}
+
+
+<div class="container contents bg-light">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Words of wisdom</li>
+        </ol>
+    </nav>
+    <h1>Feed Your Spirit</h1>
+    <div class="row m-auto">
+        <div class="col-md-6">
+            {% for word in words %}
+            <div class="card mb-3 border-info">
+                <!-- <div class="card-header">
+                    <div style="display:inline;" class="float-left"><img src="media/{{word.image}}" style="width: 3rem; height: 3rem; border-radius: 100%;" /></div>
+                    <div style="display:inline;" class="float-left">
+                        <a href="#">
+                            <h1 class="pt-3">{{word.title}}</h1>
+                        </a>
+                    </div>
+                </div> -->
+                <div class="card-body">
+                    <div style="display:inline;" class="float-left"><img src="media/{{word.image}}" style="width: 3rem; height: 3rem; border-radius: 100%;" /></div>
+                    <a href="#">
+                        <h1 class="pt-3">{{word.title}}</h1>
+                    </a>
+                    <p>{% block content %}{{word.contents |linebreaksbr | safe }}.{% endblock %}</p>
+                </div>
+            </div>
+            {% endfor %}
+            <div>
+                {% if words.has_other_pages %}
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination pagination-sm justify-content-end">
+                        {% if words.has_previous %}
+                        <li class="page-item"><a class="page-link" href="?page={{ words.previous_page_number }}">Previous</a></li>
+                        {% else %}
+                        <li class="page-item disabled">
+                            <span class="page-link">Previous</span>
+                        </li>
+                        {% endif %} {% for i in words.paginator.page_range %} {% if words.number == i %}
+                        <li class="active page-item">
+                            <a class="page-link" href="#">{{ i }} <span class="sr-only">(current)</span></a>
+                        </li>
+                        {% else %}
+                        <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                        {% endif %} {% endfor %} {% if words.has_next %}
+                        <li class="page-item"><a class="page-link" href="?page={{ words.next_page_number }}">Next</a></li>
+                        {% else %}
+                        <li class="page-item disabled">
+                            <span class="page-link">Next</span>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="col-md-3 sidebar">
+            <div class="vl"></div>
+            <div class="card mb-3 shadow">
+                <div class="card-header">
+                    <hi>About the Author</hi>
+                </div>
+                <div class="card-body">
+                    <div style="display:inline;" class="float-left"><img src="{%  static 'assets/img/me.jpg' %}" style="width: 3rem; height: 3rem; border-radius: 100%;" /></div>
+
+                    <p>{{context.intro | truncatewords:10}} </p>
+                    <a href="/about-me" class="btn btn-outline-info">view more</a>
+                </div>
+            </div>
+            <div>
+                <h5>Related posts</h5>
+                <hr />
+                <ul>
+                    {% for obj in obje %}
+                    <li><a href="blog-details/{{obj.slug}}">{{obj.title}}</a></li>
+
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'scripts/scripts.html' %}

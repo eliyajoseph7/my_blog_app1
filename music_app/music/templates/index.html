@@ -1,0 +1,118 @@
+{%load static%}
+
+<!-- Navigation-->
+{% include 'navbar/nav.html' %}
+<!-- Masthead-->
+<header class="masthead">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center justify-content-center text-center">
+            <div class="col-lg-10 align-self-end">
+                <h1 class="text-uppercase text-white font-weight-bold">Home of Your Favorite Gospel Videos of olds</h1>
+                <hr class="divider my-4" />
+            </div>
+            <div class="col-lg-8 align-self-baseline">
+                <p class="text-white-75 font-weight-light mb-5">Here you will get to know and hear the history of powerful gospel praise and worship songs written long time ago and more others</p>
+                <a class="btn btn-primary btn-xl js-scroll-trigger" href="/blog-home">Find Out More</a>
+            </div>
+        </div>
+    </div>
+</header>
+{% include 'indexComponents/services.html' %}
+<section>
+
+    <div class="container">
+        <h2 class="text-center mt-5" id="overview">Overview</h2>
+        <hr class="divider my-4">
+
+        <div class="row align-items-cente">
+            <div class="col-lg-6 order-lg-2">
+                <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="{% static 'img/amazing.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                    <h2 class="display-4">Amazing Grace</h2>
+                    <p>"Amazing Grace" is a Christian hymn published in 1779, with words written in 1772 by the English poet and Anglican clergyman John Newton (1725–1807). Newton wrote the words from personal experience. ... </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="{% static 'img/victory.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="p-5">
+                    <h2 class="display-4">Victory in Jesus</h2>
+                    <p>HYMN HISTORY: Eugene Monroe Bartlett Senior (1885-1941) was born on Christmas Eve of 1885. He dedicated his life to Jesus at an early age. Years later, as a very successful business man, he decided to invest his money into founding
+                        the Hartford Music Company and Music Institute. He also became editor of the Herald Song music magazine.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="{% static 'img/trading.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                    <h2 class="display-4">Trading my Sorrow</h2>
+                    <p>Trading my Sorrow is a song by Darrell Evans and it is a compilation worship music of him “The Best of Darrell Evans” and released in 2002. When you feel sorrow instantly, put it on the hand of our God. Remember His death and resurrection
+                        sets us free indeed.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include 'indexComponents/potfolio.html' %}
+
+<section class="projects-section bg-light" id="projects">
+    <div class="bg-1">
+        <div class="container">
+            <div class="row justify-content-center no-gutters">
+                <div class="col-lg-6 tv">
+                    <a href="/etv " target="_blank ">
+                        <img src="{% static 'img/emmanuel.png' %} " class="emmanuel h-100 img-fluid" alt=" ">
+                        <img src="{% static 'img/etv.png' %} " class="etv h-100 img-fluid" alt=" ">
+                    </a>
+                </div>
+                <div class="col-lg-6 order-lg-first">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-right">
+                                <h5 class="text-white">Looking for a christian channel?</h5>
+                                <p class="mb-0 text-white-50">Watch EmmanuelTv live from lagos Nigeria. <br /><em>Changing Lives, Changing Nations, changing the World</em></p>
+                                <a class="btn btn-primary btn-xs js-scroll-trigger" href="/etv">watch</a>
+                                <hr class="d-none d-lg-block mb-0 mr-0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% include 'indexComponents/footer.html' %}
+</body>
+{% include 'scripts/scripts.html'%}
+
+</html>
+
+<style>
+
+</style>

@@ -1,0 +1,180 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>music</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico' %}" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+    <!-- Third party plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <!-- <link href="{% static 'css/one-page-wonder.min.css' %}" rel="stylesheet"> -->
+    <link href="{% static 'css/custom_styles.css' %}" rel="stylesheet">
+    <link href="{% static 'css/modern.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="container">
+
+
+        <!-- Header -->
+        <div id="header" class="fixed-top">
+            <div id="branding">
+                <h1 id="site-name"><a href="/">Good Morning</a></h1>
+            </div>
+            <div id="user-tools">
+
+                Faith,
+                <strong>is of man's heart</strong>.
+            </div>
+        </div>
+        <!-- END Header -->
+    </div>
+</body>
+<style>
+    #container {
+        position: relative;
+        width: 100%;
+        min-width: 980px;
+        padding: 0;
+    }
+    
+    #site-name a {
+        color: #F5D57B;
+    }
+    
+    div {
+        display: block;
+    }
+    
+    #header {
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 40px;
+        background: #417690;
+        color: #ffc;
+        overflow: hidden;
+    }
+    
+    #branding h1,
+    #branding h1 a:link,
+    #branding h1 a:visited {
+        color: #f5dd5d;
+    }
+    
+    #header a:link,
+    #header a:visited {
+        color: #fff;
+    }
+    
+    a:link,
+    a:visited {
+        color: #447e9b;
+        text-decoration: none;
+    }
+    
+    #branding h1 {
+        padding: 0;
+        margin: 0 20px 0 0;
+        font-weight: 300;
+        font-size: 24px;
+        color: #f5dd5d;
+    }
+    
+    h1 {
+        margin: 0 0 20px;
+        font-weight: 300;
+        font-size: 20px;
+        color: #666;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-weight: bold;
+    }
+    
+    #user-tools {
+        font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+        font-size: 14px;
+    }
+    
+    body {
+        margin: 0;
+        color: #333;
+    }
+    
+    .contents {
+        padding-top: 60px;
+    }
+    
+    .sidebar {
+        position: fixed;
+        z-index: 1;
+        right: 50%;
+        left: 50%;
+        background: #eee;
+        overflow-x: hidden;
+        padding: 8px 0;
+    }
+    
+    .sidebar h5 {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+    }
+    
+    .sidebar li {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        color: #2196F3;
+        display: block;
+    }
+    
+    .sidebar li:hover {
+        color: #064579;
+    }
+    
+    .vl {
+        border-left: 6px solid green;
+        height: 100%;
+        position: absolute;
+        left: 0%;
+        margin-left: -3px;
+        top: 0;
+    }
+    
+    @media screen and (max-width: 850px) {
+        .sidebar {
+            padding-top: 15px;
+            position: relative;
+            left: 0;
+            bottom: 0;
+        }
+        .sidebar li {
+            font-size: 18px;
+        }
+    }
+</style>

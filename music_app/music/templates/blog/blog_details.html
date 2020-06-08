@@ -1,0 +1,236 @@
+{% include 'navbar/wordsNav.html' %} {% load static %}
+
+<div class="container contents bg-light">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">{{object.title}}
+        <!-- <small>by
+            <a href="#">eliyajoseph7</a>
+          </small> -->
+    </h1>
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="/blog-home">Home</a>
+        </li>
+        <li class="breadcrumb-item active">{{ object.title }}</li>
+    </ol>
+
+    <div class="row">
+
+        <!-- Post Content Column -->
+        <div class="col-lg-8">
+            <p class="lead">{{ object.description }}</p>
+
+            <hr>
+
+            <!-- Date/Time -->
+            <p>Posted on {{object.date}}</p>
+
+            <hr>
+
+            <!-- Post Content -->
+            <div class="w-100 mb-3" style="height: 450px;">
+                <img src="/media/{{object.image}}" class="w-100 h-100 p-3" style="object-fit: cover;" />
+            </div>
+
+            {{ object.body|linebreaksbr }}
+
+            <blockquote class="blockquote">
+                <p class="mb-0 mt-3"> </p>Written by: {{object.author}} on {{object.date}}
+                <footer class="blockquote-footer w-100">The information source is:<br />{% for info in infoSources %} {% if info %}
+
+                    <i class="fa fa-angle-right"></i> <cite title="{{object.title}}"><a href="{{info.info_source}}" target="_blank">{{info.info_source}}</a></cite>
+                    <br /> {% endif %}{% endfor %}
+                </footer>
+            </blockquote>
+
+            <hr>
+
+            <div class="mt-3 w-100">
+                <iframe width="100%" height="315" src="{{object.video_url}}">
+                </iframe>
+            </div>
+            <!-- Comments Form -->
+            <div class="card my-4">
+                <h5 class="card-header">Leave a Comment:</h5>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Single Comment -->
+            <div class="media mb-4">
+                <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+                <div class="media-body">
+                    <h5 class="mt-0">Commenter Name</h5>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                </div>
+            </div>
+
+            <!-- Comment with nested comments -->
+            <div class="media mb-4">
+                <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+                <div class="media-body">
+                    <h5 class="mt-0">Commenter Name</h5>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                    <div class="media mt-4">
+                        <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+                        <div class="media-body">
+                            <h5 class="mt-0">Commenter Name</h5>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        </div>
+                    </div>
+
+                    <div class="media mt-4">
+                        <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+                        <div class="media-body">
+                            <h5 class="mt-0">Commenter Name</h5>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+            <!-- Search Widget -->
+            <div class="card mb-4">
+                <h5 class="card-header">Search</h5>
+                <div class="card-body">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                    <button class="btn btn-secondary" type="button">Go!</button>
+                  </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categories Widget -->
+            <div class="card my-4">
+                <h5 class="card-header">Categories</h5>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="#">Web Design</a>
+                                </li>
+                                <li>
+                                    <a href="#">HTML</a>
+                                </li>
+                                <li>
+                                    <a href="#">Freebies</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="#">JavaScript</a>
+                                </li>
+                                <li>
+                                    <a href="#">CSS</a>
+                                </li>
+                                <li>
+                                    <a href="#">Tutorials</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="smartphone">
+                <div class="content">
+                    <iframe src="https://emmanuel.tv/live" style=" width:100%;border:none;height:100% "></iframe>
+                </div>
+            </div>
+
+            <div class="card my-5">
+                <h5 class="card-header ">One of my project</h5>
+                <iframe name="Framename " src="http://desolate-shelf-21097.herokuapp.com/home" width="100% " height="500 " frameborder="0 " scrolling="auto " class="frame-area ">        </iframe>
+
+            </div>
+            <!-- Side Widget -->
+            <div class="card my-4 tv ">
+                <a href="https://emmanuel.tv/live " target="_blank ">
+                    <h5 class="card-header ">Watch emmanueltv live</h5>
+                    <img src="{% static 'img/etv.png' %} " class="w-100 emmanuel " />
+                    <img src="{% static 'img/emmanuel.png' %} " class="w-100 etv " />
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
+{% include 'indexComponents/footer.html' %}
+
+</body>
+{% include 'scripts/scripts.html'%}
+
+</html>
+
+<style>
+    /* The device with borders */
+    
+    .smartphone {
+        position: relative;
+        width: 360px;
+        height: 640px;
+        margin: auto;
+        border: 16px black solid;
+        border-top-width: 60px;
+        border-bottom-width: 60px;
+        border-radius: 36px;
+    }
+    /* The horizontal line on the top of the device */
+    
+    .smartphone:before {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 5px;
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #333;
+        border-radius: 10px;
+    }
+    /* The circle on the bottom of the device */
+    
+    .smartphone:after {
+        content: '';
+        display: block;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        left: 50%;
+        bottom: -65px;
+        transform: translate(-50%, -50%);
+        background: #333;
+        border-radius: 50%;
+    }
+    /* The screen (or content) of the device */
+    
+    .smartphone .content {
+        /* width: 360px; */
+        height: 520px;
+        background: white;
+    }
+</style>

@@ -1,0 +1,17 @@
+{% load static %}
+<section id="portfolio">
+    <div class="container-fluid p-0">
+        <div class="row no-gutters">
+            {% for post in posts %}
+            <div class="col-lg-4 col-sm-6" style="height: 300px; width: 400px;">
+                <a class="portfolio-box h-100 w-100" href="media/{{post.image}}"><img class="img-fluid w-100 h-100" src="media/{{post.image}}" alt="" style="object-fit: cover;">
+                    <div class="portfolio-box-caption">
+                        <div class="project-category text-white-50">{{post.title}}</div>
+                        <div class="project-name">{{post.description}}</div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

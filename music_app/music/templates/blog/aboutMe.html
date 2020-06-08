@@ -1,0 +1,119 @@
+{% include 'navbar/wordsNav.html' %} {% load static %}
+
+<div class="container contents">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/words">Words of wisdom</a></li>
+            <li class="breadcrumb-item active" aria-current="page">About-Me</li>
+        </ol>
+    </nav>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <div class="mb-3" style="display: block;">
+                        <div style="display:inline;" class="float-left"><img src="{%  static 'assets/img/me.jpg' %}" style="width: 10rem; height: 10rem; border-radius: 100%;" /></div>
+                        <h1>Name: Eliya Joseph</h1>
+                        <div class="float-right">
+                            <ul>
+                                <li><strong>Adress: </strong>Dar es salaam, Tanzania 0000</li>
+                                <li><strong>Phone: </strong>+255 65 720 7180</li>
+                                <li><strong>Email: </strong><a href="mailto:exaveryeliya20@gmail.com">exaveryeliya20@gmail.com</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div style="margin-top: 140px;">
+                        <h5>PROFESSIONAL SUMMARY</h5>
+                        <p>{{context.intro}}</p>
+                    </div>
+                    <div>
+                        <h5>WORK HISTORY </h5>
+                        <p>{{context.work}}</p>
+                    </div>
+                    <div>
+                        <h5>Experience</h5>
+                        {% for exp in experience %}
+                        <p><strong>{{exp.header}}</strong></p>
+                        <ul>
+                            <li>{{exp.contents | linebreaksbr}}</li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                    <div>
+                        <h5>Education</h5>
+                        <p>Bachelor of Science in computer Science</p>
+                        <ul>
+                            <li>University of Dar es Salaam.</li>
+                            <li>Current enrolled.</li>
+                        </ul>
+
+                        <p>A-Level, PCM, 2015-2017</p>
+                        <ul>
+                            <li>Moshi secondary school- Moshi-Tanzania.</li>
+                            <li>Acquired advanced level secondary school certificate.</li>
+                        </ul>
+
+                        <p>O-Level,2010-2014</p>
+                        <ul>
+                            <li>Nyanduga secondary school- Mara-Tanzania</li>
+                            <li>Studied Ordinary level from 2011 to 2014 and acquired an Ordinary level certificate together with a best physics student at my school.</li>
+                        </ul>
+
+                        <p>Primary school education, 2004-2010</p>
+                        <ul>
+                            <li>Utegi primary school- Mara-Tanzania</li>
+                            <li>Certified as a second-best student of all time.</li>
+                        </ul>
+
+                    </div>
+                    <div>
+                        <h5>Skills</h5>
+                        <ul>
+                            <li>Advanced computer skills.</li>
+                            <li>Teamwork.</li>
+                            <li>Programming.</li>
+                            <li>Building student relationships.</li>
+                            <li>Working under pressure.</li>
+                            <li>Adaprability and flexibility.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>ACCOMPLISHMENT</h5>
+                        <ul>
+                            <li> {{context.accomplish | linebreaksbr}}</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>ADDITIONAL INFORMATION</h5>
+                        <p><strong>Languages</strong></p>
+                        <ul>
+                            <li>Swahili</li>
+                            <li>English</li>
+                        </ul>
+
+                        <p><strong>Hobbies</strong></p>
+                        <ul>
+                            <li>Programming</li>
+                            <li>Reading books</li>
+                            <li>Playing and watching football</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    h5 {
+        text-align: center;
+        margin-top: 20px;
+        color: #666;
+    }
+    
+    ul li {
+        list-style-type: none;
+    }
+</style>
